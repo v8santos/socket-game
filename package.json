@@ -1,0 +1,24 @@
+{
+  "name": "socket-game",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/v8santos/socket-game.git"
+  },
+  "author": "Victor Santos",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/v8santos/socket-game/issues"
+  },
+  "homepage": "https://github.com/v8santos/socket-game#readme",
+  "dependencies": {
+    "express": "^4.17.2",
+    "socket.io": "^4.4.1"
+  },
+  "devDependencies": {}
+}
