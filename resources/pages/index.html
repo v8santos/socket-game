@@ -5,12 +5,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-    <div>O Jogo</div>
+    
+    <div class="container">
+        <div id="errors"></div>
+        <!-- Game container -->
+        <canvas id="game-canvas"></canvas>
+    </div>
+
+
     <script src="/socket.io/socket.io.js"></script>
     <script>
         var socket = io();
+        const errors = document.getElementById('errors');
+
+        socket.on('bug', (err) => {
+            console.log('aaa')
+            errors.innerHTML = err
+        });
     </script>
+    <script src="/js/index.js"></script>
 </body>
 </html>
