@@ -26,5 +26,15 @@ io.on('connection', (socket) => {
 });
 
 server.listen(port, () => {
-    console.log(`Listen on port ${port}`);
+    let address = server.address().address;
+    address = address == "::" && "http://127.0.0.1";
+    let serverPort = server.address().port
+    console.log(`Listening: ${address}:${serverPort}`);
 });
+
+process.on('SIGINT', () => {
+    server.close(() => {
+        console.log("Bye, Bye!")
+    });
+})
+  
